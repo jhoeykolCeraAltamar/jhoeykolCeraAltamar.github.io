@@ -2,118 +2,75 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<title>Regalo de cumpleaños</title>
-	<link rel="stylesheet" href="estilos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+</style>
 
 <body>
+    <div class="carta">
+        <div class="contenido">
+            <div class="parrafo">
+                <div class="titulo">
+                    Mi amor bonito... ❤️
+                </div>
+                <div class="contenido-carta">
 
-	<div class="wrap">
-		<div>
-			<p class="bienvenida">
-				<spam class="sub-bienvenida">¡Bienvenida a la emocionante búsqueda de tu regalo de cumpleaños!<br>🎉🎉</spam>
-				<br>
-				<br>
+                    Mi amor hermoso,
 
-				En este emocionante viaje de pistas y descubrimientos, cada señal está diseñada con amor para guiarte
-				hacia una recompensa única. 🎉🎂
-			</p>
-		</div>
-		<div class="tarjeta-wrap">
-			<div class="tarjeta">
-				<div class="adelante card2"></div>
-				<div class="atras">
-					<p id="mensaje-diario"></p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<script>
-		// Función para obtener un mensaje diferente para cada día
-		function obtenerMensajeDiario() {
-			// Obtener la fecha actual
-			var fechaActual = new Date();
+                    Hoy es un día muy especial para ambos, porque celebramos 6 meses de amor, de una historia que apenas
+                    comienza, pero que ya ha marcado mi vida profundamente.
+                    <br />
 
-			// Definir la fecha límite (29 de febrero)
-			var fechaLimite = new Date('2024-02-29');
-			console.log(fechaActual)
-			// Verificar si la fecha actual es antes de la fecha límite
-			if (fechaActual < fechaLimite) {
-				// Obtener el número del día actual
-				var numeroDia = fechaActual.getDate();
+                    Durante estos seis meses, me he sentido el hombre más feliz del mundo. No exagero cuando lo digo,
+                    porque
+                    a
+                    tu lado he vivido momentos mágicos, desde nuestro primer beso hasta cada caricia, cada risa, cada
+                    locura
+                    compartida. Todo lo que hemos construido juntos ha sido hermoso y verdadero. Y en todo este tiempo,
+                    no
+                    he
+                    dejado de agradecerle a la vida por haberme cruzado contigo.
+                    <br />
 
-				// Mensajes para cada día
-				var mensajes = [
-					"",
-					"",
-					"",
-					"Más que leer, esto implica una experiencia multisensorial.",
-
-					"Hay mentiras que te elevan. Hay verdades que te entierran. Hay amores que te dañan. Hay amores que te salvan.",
-
-					"Un día me abrazó tanto la soledad que le tomé cariño, lloré como un niño y le conté mis historias. Charlamos por largas horas como dos viejos amigos; después nos despedimos y cada quien siguió su camino.",
-
-					"Dicen que las manecillas del reloj te ayudan a sanar; yo creo que eso es verdad, mas también hay que poner de nuestra parte. No podemos esperar que la corriente nos lleve hacia un puerto seguro mientras nosotros insistimos en remar hacia lo más profundo.",
-
-					"No es una guía convencional, pero te conducirá a descubrimientos sorprendentes.",
-
-					"Cuando no tengo con quién hablar por las noches, hablo conmigo. Lloro, me río, y aunque piensen que estoy loco, duermo tranquilo. Porque no hay lugar más seguro en el mundo que uno mismo.",
-
-					"Prepárate para algo que no podrías encontrar en una estantería común.",
-
-					"A veces a uno le dan ganas de amar bonito, de apagar las luces del mundo y perderse en el brillo de una mirada, de entregar el corazón sin miedo a nada.",
-
-					"Este regalo no tiene índice, pero está lleno de momentos inesperados.",
-
-					"Sonrío, no porque siempre me vaya bien en la vida, sonrío porque ya pasé bastante tiempo triste y, la verdad, me cansé de buscar culpables.",
-
-					"No es solo para la mente, sino también para el alma.",
-
-					"Eres preciosa porque, aunque caigas al precipicio, siempre vuelves al principio; porque pudiste ser una canción triste, sin vida, pero elegiste ser poesía.",
-
-					"Aunque no es una historia ficticia, tiene momentos que parecen sacados de un cuento.",
-
-					"Gracias a los que les regalé lo mejor de mí y a cambio recibí lo peor de ellos. A los que se apartaron de mí mientras yo moría por dentro. A ellos, a los que les extendí mis manos y mi amistad, a los que estuvieron en mi luz y desaparecieron en mi oscuridad. A ellos, gracias por lo que hicieron. Aquí te haces fuerte o te quedas en el suelo.",
-
-					"No es una obra de renombre, pero tiene el poder de volverse legendario en tu vida.",
-
-					"Critican como si la conocieran, como si supieran lo que ha sufrido, como si hubieran recorrido su camino. Y la quieren ver acabada, hundida y olvidada, pero a ella no le asusta nada. Levantarse con más fuerza cuando se siente abatida, ese es su estilo de vida.",
-
-					"No es algo que puedas desenvolver fácilmente, pero sí que desatará emociones.",
-
-					"Poseo un corazón maltrecho y una mirada que pasa inadvertida. Mis sueños adoptan la tonalidad del violeta, y mis palabras se visten con la elegancia de la poesía. Aunque suelo hablar en exceso, soy capaz de guardar secretos. Permítame expresar mi atrevimiento. Tal vez ya esté fatigado/a de este mundo materialista, y si así lo desea, podríamos resplandecer entre luciérnagas mientras las estrellas nos hacen compañía.",
-
-					"Es algo que no puedes guardar en una biblioteca, pero sí en tu corazón.",
-
-					"Mientras la vida me regale su aliento, rendirme no está en mis planes. Sé muy bien que tendré mis tropiezos, es que forman parte del vivir. Y no voy a decir que nunca me ha visitado el dolor, claro que sí. Hemos tomado café y hasta se ha reído de mí, pero es mi decisión quién se queda conmigo, y por lo pronto el dolor ya no es bienvenido.",
-
-					"No es un clásico, pero tiene el potencial de convertirse en un tesoro personal.",
-
-					"Yo no busco llenar espacios, para eso están los crucigramas. Yo busco una persona llena, completa, que me dé todo sin reservas, pero que también esté dispuesta a recibir lo mismo. Yo no busco perfección: busco en lo imperfecto lo real. Lo verdadero.",
-
-					"Vale la pena disfrutar la vida con los que se quedaron a pesar de las habladurías. Con los que te acompañan al cine o a la sala de tu casa, con esos que se burlan de tu amargura y están al tanto de todo lo que te pasa. Con los que saben que te falta un tornillo, pero, en vez de llamar al psiquiatra, eligen enloquecer contigo.",
-
-					"No es solo información, es un fragmento de la magia de la vida.",
-
-					"¡Feliz cumpleaños a alguien tan único como una estrella brillante en el cielo! 🎉 Hoy celebramos a una persona excepcional: inteligente, carismática, una verdadera joya de corazón. Tu bondad ilumina cada rincón y tu inteligencia destaca como un faro. Eres tan extrovertida como un estallido de alegría, ¡y esa locura tuya siempre nos hace sonreír! 🌟 Que este día esté lleno de risas, amor y momentos tan especiales como tú. ¡Disfruta al máximo tu día, persona increíble! 🎂🎈✨",
-
-					"Posdata: ¡La celebración no termina aquí! El regalo especial está reservado para ser entregado en persona. ¡Prepárate para más sorpresas y momentos inolvidables cuando nos encontremos! 🎁🎉 ¡Feliz cumpleaños nuevamente! 🥳✨"
-				];
-
-
-				// Mostrar el mensaje correspondiente al día actual
-				var mensaje = mensajes[numeroDia - 1];
-				document.getElementById('mensaje-diario').innerText = mensaje;
-			} else {
-				// Mensaje para después del 29 de febrero
-				document.getElementById('mensaje-diario').innerText = "Ya no hay mensajes disponibles.";
-			}
-		}
-
-		// Llamar a la función al cargar la página
-		obtenerMensajeDiario();
-	</script>
+                    No llegaste cuando te busqué… llegaste cuando más te necesitaba. Sin avisar, sin condiciones, y
+                    desde
+                    entonces me cambiaste la vida. Porque contigo he descubierto lo que significa amar de verdad, lo que
+                    es
+                    sentirse completo.
+                    <br />
+                    Sabes… tan solo con pensar en ti, mi día se ilumina. Al ver una fotografía tuya, mi corazón se
+                    acelera,
+                    mis
+                    pensamientos se llenan de ti, y mi alma se tranquiliza. Eres mi calma, mi ilusión, mi alegría.
+                    <br />
+                    Eres la primera persona a la que he amado así, con tanta entrega, con tanto sentimiento, con tanta
+                    sinceridad. Y no tengo dudas… eres tú con quien quiero compartir mis días, mis sueños, mis planes,
+                    mis
+                    triunfos, mis abrazos y hasta mis silencios.
+                    <br />
+                    Contigo el tiempo se detiene. Cuando estás cerca, no existe nada más. Todo se desvanece a mi
+                    alrededor y
+                    solo estás tú… tú que llenas mis sentidos, tú que eres la dueña de mis pensamientos, de mis
+                    sonrisas, de
+                    mis
+                    suspiros, y de todo mi ser.
+                    <br />
+                    Quiero que lo sepas, lo recuerdes siempre y lo sientas en cada palabra que te digo:
+                    Te amo con toda mi alma, con todas mis fuerzas y con cada latido de mi corazón.
+                    Gracias por existir, gracias por elegirme cada día, gracias por enseñarme lo que es amar de verdad.
+                    Y si esto es solo el comienzo… no puedo esperar a vivir el resto de esta hermosa historia contigo.
+                    <br />
+                    Con todo mi amor,
+                    Tu persona que nunca dejará de amarte.
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

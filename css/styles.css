@@ -1,0 +1,63 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    background-color: black;
+}
+
+.carta {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/**#E63946*/
+.carta .contenido {
+    width: 80%;
+    height: 500px;
+    border: 1px solid #363532;
+    background-color: #f17680d8;
+    border-radius: 30px;
+    padding: 15px;
+
+}
+
+
+.parrafo {
+    height: 500px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 25px;
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;  
+    background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 29.6'%3E%3Cpath fill='rgba(255,0,0,0.07)' d='M23.6,0c-3.4,0-6.3,2.1-7.6,5.1C14.7,2.1,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4 c0,8.5,16,21.2,16,21.2s16-12.7,16-21.2C32,3.8,28.2,0,23.6,0z'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 29.6'%3E%3Cpath fill='rgba(255,0,0,0.07)' d='M23.6,0c-3.4,0-6.3,2.1-7.6,5.1C14.7,2.1,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4 c0,8.5,16,21.2,16,21.2s16-12.7,16-21.2C32,3.8,28.2,0,23.6,0z'/%3E%3C/svg%3E");
+    background-size: 150px 150px, 200px 200px;
+    /* corazones más separados */
+    background-position: 0 0, 75px 75px;
+    /* desplaza una capa para no solaparse */
+    background-repeat: repeat, repeat;
+
+}
+
+.contenido-carta{
+    background-color: transparent;
+    position: relative;
+    top: 50px;
+    height: 400px;
+    padding: 16px;
+    box-sizing: content-box;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+.titulo {
+    background-color: transparent;
+    position: fixed;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 35px;
+}
