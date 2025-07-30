@@ -70,7 +70,32 @@
                 </div>
             </div>
         </div>
+		<div class="corazon">❤️</div>
     </div>
+	<script>
+        setTimeout(() => {
+            document.querySelector(".rosas").style.display = "none";
+            document.querySelector(".sobre").style.display = "block";
+        }, 10000); // Mostrar el sobre después de 10 segundos
+
+        function abrirSobre() {
+            document.querySelector(".tapa").style.transform = "rotateX(180deg)";
+            setTimeout(() => {
+                document.querySelector(".contenido").style.display = "block";
+            }, 1000); // Mostrar carta después de que el sobre se "abra"
+        }
+
+        // Corazones flotantes
+        function crearCorazon() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.style.left = Math.random() * 100 + "%";
+            heart.innerHTML = "❤️";
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 5000);
+        }
+        setInterval(crearCorazon, 500);
+    </script>
 </body>
 
 </html>
