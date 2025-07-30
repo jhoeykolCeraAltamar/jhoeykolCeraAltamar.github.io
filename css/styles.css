@@ -13,6 +13,7 @@
 
 /**#E63946*/
 .carta .contenido {
+    z-index: 1;
     width: 80%;
     height: 500px;
     border: 1px solid #363532;
@@ -32,7 +33,7 @@
     font-family: "Satisfy", cursive;
     font-weight: 400;
     font-style: normal;
-    box-sizing: border-box;  
+    box-sizing: border-box;
     background-image:
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 29.6'%3E%3Cpath fill='rgba(255,0,0,0.07)' d='M23.6,0c-3.4,0-6.3,2.1-7.6,5.1C14.7,2.1,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4 c0,8.5,16,21.2,16,21.2s16-12.7,16-21.2C32,3.8,28.2,0,23.6,0z'/%3E%3C/svg%3E"),
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 29.6'%3E%3Cpath fill='rgba(255,0,0,0.07)' d='M23.6,0c-3.4,0-6.3,2.1-7.6,5.1C14.7,2.1,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4 c0,8.5,16,21.2,16,21.2s16-12.7,16-21.2C32,3.8,28.2,0,23.6,0z'/%3E%3C/svg%3E");
@@ -44,7 +45,7 @@
 
 }
 
-.contenido-carta{
+.contenido-carta {
     background-color: transparent;
     position: relative;
     top: 50px;
@@ -54,6 +55,7 @@
     overflow-y: scroll;
     scrollbar-width: none;
 }
+
 .titulo {
     background-color: transparent;
     position: fixed;
@@ -61,8 +63,10 @@
     font-style: normal;
     font-size: 35px;
 }
- /* Corazones flotantes */
- .heart {
+
+/* Corazones flotantes */
+.heart {
+    z-index: 0;
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -70,6 +74,7 @@
     color: #d81b60;
     font-size: 2rem;
     animation: float 5s linear infinite;
+    background-color: transparent;
 }
 
 @keyframes float {
