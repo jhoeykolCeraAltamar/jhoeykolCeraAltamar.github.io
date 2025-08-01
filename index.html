@@ -83,7 +83,7 @@
                     <span>&nbsp/&nbsp</span>
                     <span id="duration">00:00</span>
                 </div>
-                <audio autoplay id="audio">
+                <audio id="audio" autoplay loop>
                     <source src="/audios/foreverstar.mp3" type="audio/mpeg">
                 </audio>
             </div>
@@ -98,9 +98,7 @@
         const currentTimeEl = document.getElementById("currentTime");
         const durationEl = document.getElementById("duration");
 
-        let isPlaying = true;
-        audio.muted = false;
-        
+        let isPlaying = false;
         function formatTime(seconds) {
             const min = Math.floor(seconds / 60);
             const sec = Math.floor(seconds % 60);
@@ -123,13 +121,13 @@
 
         playPause.addEventListener("click", () => {
             if (isPlaying) {
-                audio.pause();                
+                audio.pause();
                 playPause.textContent = "▶️";
             } else {
-                audio.play();        
+                audio.play();
                 console.log("🚀 ~ status:", status)
                 playPause.textContent = "⏸️";
-                
+
             }
             isPlaying = !isPlaying;
         });
@@ -150,7 +148,16 @@
             const newTime = (clickX / width) * duration;
             audio.currentTime = newTime;
         });
+        const reproducirAudio = () => {
+            audio.play()
+                .then(() => console.log("Audio reproduciéndose..."))
+                .catch(err => console.warn("Error de reproducción:", err));
+            // Evita que vuelva a activarse después del primer clic
+            document.removeEventListener("click", reproducirAudio);
+        };
 
+        // Escucha cualquier clic en el documento
+        document.addEventListener("click", reproducirAudio);
         function crearCorazon() {
             const heart = document.createElement("div");
             heart.classList.add("heart");
