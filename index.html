@@ -69,7 +69,7 @@
                     Tu persona que nunca dejará de amarte.
                 </div>
             </div>
-            <div class="audio-player"> 
+            <div class="audio-player">
                 <div class="controls">
                     <button id="playPause">⏸️</button>
                 </div>
@@ -99,7 +99,8 @@
         const durationEl = document.getElementById("duration");
 
         let isPlaying = true;
-
+        audio.muted = false;
+        
         function formatTime(seconds) {
             const min = Math.floor(seconds / 60);
             const sec = Math.floor(seconds % 60);
@@ -122,13 +123,13 @@
 
         playPause.addEventListener("click", () => {
             if (isPlaying) {
-                audio.pause();
-                status.textContent = "Pausado";
+                audio.pause();                
                 playPause.textContent = "▶️";
             } else {
-                audio.play();
-                status.textContent = "Reproduciendo";
+                audio.play();        
+                console.log("🚀 ~ status:", status)
                 playPause.textContent = "⏸️";
+                
             }
             isPlaying = !isPlaying;
         });
