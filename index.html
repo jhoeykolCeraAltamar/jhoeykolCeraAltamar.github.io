@@ -69,10 +69,87 @@
                     Tu persona que nunca dejará de amarte.
                 </div>
             </div>
+            <div class="audio-player">
+                <div class="controls">
+                    <button id="playPause">⏸️</button>
+                </div>
+
+                <div class="progress-container" id="progressContainer">
+                    <div class="progress" id="progressBar"></div>
+                </div>
+
+                <div class="time">
+                    <span id="currentTime">00:00</span>
+                    <span>&nbsp/&nbsp</span>
+                    <span id="duration">00:00</span>
+                </div>
+                <audio autoplay id="audio">
+                    <source src="/audios/forever star.mp3" type="audio/mpeg">
+                </audio>
+            </div>
         </div>
     </div>
-	<script>
-        // Corazones flotantes
+    <script>
+        const audio = document.getElementById("audio");
+        const playPause = document.getElementById("playPause");
+        const status = document.getElementById("status");
+        const progressBar = document.getElementById("progressBar");
+        const progressContainer = document.getElementById("progressContainer");
+        const currentTimeEl = document.getElementById("currentTime");
+        const durationEl = document.getElementById("duration");
+
+        let isPlaying = true;
+
+        function formatTime(seconds) {
+            const min = Math.floor(seconds / 60);
+            const sec = Math.floor(seconds % 60);
+            return `${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
+        }
+
+        function updateProgress() {
+            const { currentTime, duration } = audio;
+            const percent = (currentTime / duration) * 100;
+            progressBar.style.width = percent + "%";
+            currentTimeEl.textContent = formatTime(currentTime);
+        }
+
+        // Cargar duración
+        audio.addEventListener("loadedmetadata", () => {
+            durationEl.textContent = formatTime(audio.duration);
+        });
+
+        audio.addEventListener("timeupdate", updateProgress);
+
+        playPause.addEventListener("click", () => {
+            if (isPlaying) {
+                audio.pause();
+                status.textContent = "Pausado";
+                playPause.textContent = "▶️";
+            } else {
+                audio.play();
+                status.textContent = "Reproduciendo";
+                playPause.textContent = "⏸️";
+            }
+            isPlaying = !isPlaying;
+        });
+
+        audio.addEventListener("ended", () => {
+            isPlaying = false;
+            status.textContent = "Finalizado";
+            playPause.textContent = "▶️";
+            progressBar.style.width = "0%";
+        });
+
+        // Hacer clic en la barra de progreso para mover el audio
+        progressContainer.addEventListener("click", (e) => {
+            const width = progressContainer.clientWidth;
+            const clickX = e.offsetX;
+            const duration = audio.duration;
+
+            const newTime = (clickX / width) * duration;
+            audio.currentTime = newTime;
+        });
+
         function crearCorazon() {
             const heart = document.createElement("div");
             heart.classList.add("heart");
