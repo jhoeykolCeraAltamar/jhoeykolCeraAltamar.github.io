@@ -72,7 +72,7 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    color: #d81b60;
+    color: #d81b60; 
     font-size: 2rem;
     animation: float 5s linear infinite;
     background-color: transparent;
