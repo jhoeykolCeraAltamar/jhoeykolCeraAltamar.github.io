@@ -182,6 +182,9 @@ button:hover {
 .portada {
     position: fixed;
     top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     left: 0;
     width: 100vw;
     height: 100vh;
@@ -194,6 +197,19 @@ button:hover {
     transition: opacity 1s ease;
 
 }
+
+.portada span {
+
+    background-color: transparent;
+    padding: 14px;    
+    background-color: #fff;
+    border-radius: 35px;
+    font-family: 'Satisfy', cursive;
+    font-weight: 400;
+    font-size: 22px;
+
+}
+
 
 .contenedor-portada {
     width: 90%;
